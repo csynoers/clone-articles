@@ -32,15 +32,15 @@ function get_texts( $file )
 
 function get_desc( $file )
 {
-   $text= str_replace("Ahli Sumur Bor Air Jakarta Raditia Teknik","<a href='home'><strong>Ahli Sumur Bor Air Jakarta Raditia Teknik</strong></a>", preg_replace('/^.+\n/', '', $file) );
-   $text2= str_replace("www.servicepompaairjakarta.com", "<a href='home'>www.servicepompaairjakarta.com</a>" , $text);
+   $text= str_replace("Ahli Sumur Bor Air Jakarta Raditia Teknik","<a href='{home}'><strong>Ahli Sumur Bor Air Jakarta Raditia Teknik</strong></a>", preg_replace('/^.+\n/', '', $file) );
+   $text2= str_replace("www.servicepompaairjakarta.com", "<a href='{home}'>www.servicepompaairjakarta.com</a>" , $text);
    $text3= str_replace("Telpon : 085215573803 (AS) / 08174991283 (XL)", "{telpon}" , $text2);
    $text4= str_replace("Telpon 085215573803 (AS) / 08174991283 (XL)", "{telpon}" , $text3);
    $text5= str_replace("Telp. Raditia Teknik 085215573803 (AS) / 08174991283 (XL)", "{telpon}" , $text4);
    $text6= str_replace("Telp. Raditia Teknik 085215573803 (AS)/ 08174991283 (XL)", "{telpon}" , $text5);
    $text7= str_replace("Telp. Raditia Teknik 085215573803 (AS)/ 08174991283 (XL)", "{telpon}" , $text6);
    $text8= str_replace("{telpon}", "<strong>Telp. Raditia Teknik 085215573803 (AS) / 08174991283 (XL)</strong>" , $text7);
-   $text9= str_replace("home", "https://www.servicepompaairjakarta.com/service-pompaair-jakarta" , $text8);
+   $text9= str_replace("{home}", "https://www.servicepompaairjakarta.com/service-pompaair-jakarta" , $text8);
     
    return $text9;
 }
