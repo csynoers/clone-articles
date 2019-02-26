@@ -41,16 +41,21 @@ function get_desc( $file )
    $text7= str_replace("Telp. Raditia Teknik 085215573803 (AS)/ 08174991283 (XL)", "{telpon}" , $text6);
    $text8= str_replace("{telpon}", "<strong>Telp. Raditia Teknik 085215573803 (AS) / 08174991283 (XL)</strong>" , $text7);
    $text9= str_replace("home", "https://www.servicepompaairjakarta.com/service-pompaair-jakarta" , $text8);
-   $text10= str_replace("Layanan Cepat, Ramah, Profesional dan 24 Jam Langsung datang ke rumah anda!!", "<h3 style='text-align: center;'><span style='font-size: 12pt;'><strong><em>Layanan Cepat, Ramah, Profesional dan 24 Jam Langsung datang ke rumah anda!!</em></strong></span></h3>" , $text9);
     
    return $text9;
 }
 
-$g= "INSERT INTO artikel(judul, isi, hari, tanggal, jam, gambar) VALUES ";
-foreach ($result as $k => $v) {
-   $g .= " ('{$v["title"]}','{$v["desc"]}','Selasa','".date('Y-m-d')."','".date('h:i:s')."','{$v["src"]}'),";
-}
-echo substr($g,0,-1).';';
+echo "<pre>";
+print_r($result);
+echo "</pre>";
+
+// generate query
+// $g= "INSERT INTO artikel(judul, isi, hari, tanggal, jam, gambar) VALUES ";
+// foreach ($result as $k => $v) {
+//    $g .= " ('{$v["title"]}','{$v["desc"]}','Selasa','".date('Y-m-d')."','".date('h:i:s')."','{$v["src"]}'),";
+// }
+// echo substr($g,0,-1).';';
+// end generate query
 
 
 
